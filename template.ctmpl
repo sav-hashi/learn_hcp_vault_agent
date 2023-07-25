@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to our demo!!!</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>The secret is: {{ with secret "kv-v2/data/secret1" }}{{ .Data.data.text }}{{ end }}</p>
+</body>
+</html>
