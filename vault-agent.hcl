@@ -1,15 +1,15 @@
 pid_file = "./vault-agent.pid"
 
 vault {
-    address = "https://vault-cluster-public-vault-12d7ae1f.0c07f521.z1.hashicorp.cloud:8200"
+    address = "<replace_with_path_to_vault_addr_var>"
 }
 
 auto_auth {
     method "approle" {
         mount_path = "auth/approle"
         config = {
-            role_id_file_path = "/home/ubuntu/role_id_var"
-            secret_id_file_path = "/home/ubuntu/secret_id_var"
+            role_id_file_path = "<replace_with_path_to_role_id_var>"
+            secret_id_file_path = "<replace_with_path_to_secret_id_var>"
             remove_secret_id_file_after_reading = false
         }
     }
@@ -32,7 +32,7 @@ listener "tcp" {
 }
 
 template {  
-    source = "/home/ubuntu/template.ctmpl"
-    destination = "/var/www/html/index.html"
+    source = "<replace_with_path_to_template.ctmpl>"
+    destination = "<replace_with_path_to_index.html>"
 }
 
