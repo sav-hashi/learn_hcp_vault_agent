@@ -5,6 +5,6 @@
 </head>
 <body>
     <h1>Welcome</h1>
-    <p>The secret is: {{ with secret "kv-v2/data/secret1" }}{{ .Data.data.text }}{{ end }}</p>
+    <p>The secret is: <Replace_ with_template_to_fetch_KV_secret> </p>
 </body>
 </html>
