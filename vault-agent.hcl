@@ -1,7 +1,7 @@
 pid_file = "./vault-agent.pid"
 
 vault {
-    address = "<replace_with_path_to_vault_addr_var>"
+    address = "<replace_with_vault_cluster_addr>"
 }
 
 auto_auth {
